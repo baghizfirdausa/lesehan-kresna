@@ -1,0 +1,115 @@
+.card {
+    width: 300px;
+    height: 150px;
+    padding: 1.5rem 2rem;
+}
+/* Dashboard */
+.info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: auto;
+    max-height: auto;
+    margin-top: 2rem;
+    padding: 3rem;
+}
+.info.next {
+    margin-top: 0.25rem;
+}
+
+.left-border {
+    border-left: 4px solid !important;
+}
+.left-border.bg {
+    border-left-color: #1f9e1c !important;
+}
+.left-border.br {
+    border-left-color: #df1a1a !important;
+}
+.left-border.bb {
+    border-left-color: #5f5ce3 !important;
+}
+.left-border.by {
+    border-left-color: #c0d63b !important;
+}
+.card .label {
+    font-size: 18px;
+    font-weight: bold;
+}
+.card .value {
+    font-size: 21px;
+}
+
+/* Transaksi */
+.add {
+    margin-top: 2rem;
+}
+.add button {
+    padding: 0.5rem 2rem;
+}
+.contain {
+    background-color: white;
+    max-width: 80vw;
+    padding: 3rem 4rem;
+    margin: 2rem 0;
+}
+.contain form {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.contain form button {
+    text-align: center;
+}
+.contain .table {
+    width: 100%;
+}
+.contain .table div {
+    max-width: 13px;
+    max-height: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.contain .table div .btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+.contain .table div img {
+    max-width: 15px;
+    max-height: 15px;
+}
+.contain form .btn {
+    margin-top: 2rem;
+}
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wrapper .card {
+    margin: 1rem 0;
+}
+
+/* Order */
+.container .contain form .button-container {
+    display: flex;
+    flex-direction: row;
+    width: 25vw;
+}
+.container .contain form .button-container button,
+.container .contain form .button-container a {
+    width: 10vw;
+    margin-right: 1rem;
+}
+.container .contain form table tbody tr td .form-group .form-khusus {
+    width: 5rem;
+}
