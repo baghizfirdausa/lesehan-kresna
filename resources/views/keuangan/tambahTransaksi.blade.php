@@ -25,7 +25,11 @@
             </div>
             <div class="form-group">
                 <label for="kategori_transaksi">Kategori Transaksi</label>
-                <input type="text" class="form-control" id="" name="kategori_transaksi">
+                <br>
+                <select name="jenis_transaksi" class="form-select" aria-label="Default select example">
+                    <option value="Usaha">Usaha</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="total">Jumlah Transaksi</label>

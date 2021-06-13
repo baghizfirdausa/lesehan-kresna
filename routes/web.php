@@ -7,8 +7,14 @@ Route::get('/', 'AuthController@login');
 Route::post('/postlogin', 'AuthController@postlogin')->name('postLogin');
 Route::get('/logout', 'AuthController@logout');
 
-Route::group(['middleware' => ['auth.basic', 'checkRole:Keuangan']], function () {
+Route::group(['middleware' => ['auth', 'checkRole:Keuangan, Pemilik']], function () {
+    Route::get('/laporan/index', 'LaporanController');
+    Route::post('/laporan/filter', 'LaporanController');
+});
+
+Route::group(['middleware' => ['auth', 'checkRole:Keuangan']], function () {
     Route::get('/keuangan/dashboard', 'HomeController@index');
+    Route::get('/keuangan/laporan', 'LaporanController');
 
     Route::get('/keuangan/transaksi', 'TransaksiController@index');
     Route::post('/keuangan/transaksi/filter', 'TransaksiController@filterIndex');
@@ -33,6 +39,7 @@ Route::group(['middleware' => ['auth.basic', 'checkRole:Keuangan']], function ()
 
 Route::group(['middleware' => ['auth', 'checkRole:Pemilik']], function () {
     Route::get('/pemilik/dashboard', 'HomeController@index');
+    Route::get('/pemilik/laporan', 'LaporanController');
     Route::get('/pemilik/karyawan', 'KaryawanController@index');
     Route::post('/pemilik/karyawan', 'KaryawanController@store');
     Route::get('/pemilik/karyawan/tambah', 'KaryawanController@create');

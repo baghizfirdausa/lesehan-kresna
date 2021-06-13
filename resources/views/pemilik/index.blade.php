@@ -39,13 +39,15 @@
                         <p>KARYAWAN</p>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ url('/pemilik/laporan') }}">
+                        <p>LAPORAN</p>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="dropdown">
             <div class="dropbtn">
-                <a>{{auth()->user()->name}}</a>
-            </div>
-            <div class="dropdown-content">
                 <a class="dropdown-item" href="{{ url('/logout') }}">Logout</a>
             </div>
         </div>

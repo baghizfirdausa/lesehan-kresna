@@ -38,10 +38,7 @@
         </div>
         <div class="dropdown">
             <div class="dropbtn">
-                <a>{{auth()->user()->name}}</a>
-            </div>
-            <div class="dropdown-content">
-              <a class="dropdown-item" href="{{ url('/logout') }}">Logout</a>
+                <a class="dropdown-item" href="{{ url('/logout') }}">Logout</a>
             </div>
         </div>
     </div>
